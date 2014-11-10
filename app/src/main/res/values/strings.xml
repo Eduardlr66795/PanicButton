@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">PanicButton</string>
+    <string name="action_settings">Settings</string>
+
+    <!--Main buttons-->
+    <string name="button_walkSafe">WalkSafe</string>
+    <string name="button_emergency">Emergency</string>
+    <string name="button_locate">Location</string>
+    <string name="button_quit">Quit</string>
+
+
+    <string name="hello_world">Hello world!</string>
+    <string name="start_note">Start Notification</string>
+    <string name="cancel_note">Cancel Notification</string>
+    <string name="update_note">Update Notification</string>
+
+
+    <string name="username">Update Notification</string>
+    <string name="usernamelbl">Update Notification</string>
+
+    <string name="usernamefld">Update Notification</string>
+    <string name="passwordlbl">Update Notification</string>
+    <string name="password">Update Notification</string>
+
+
+    <string name="login">Update Notification</string>
+    <string name="passwordfld">Update Notification</string>
+
+
+
+
+    <string name="unloack">Unlock</string>
+    <color name="mycolor1">#F5DC49</color>
+
+
+
+
+
+    <string name="one">1</string>
+    <string name="two">2</string>
+    <string name="three">3</string>
+    <string name="four">4</string>
+    <string name="five">5</string>
+    <string name="six">6</string>
+    <string name="seven">7</string>
+    <string name="eight">8</string>
+    <string name="nine">9</string>
+    <string name="mul">X</string>
+    <string name="div">/</string>
+    <string name="sub">-</string>
+    <string name="add">+</string>
+    <string name="cancel">C</string>
+    <string name="zero">0</string>
+    <string name="equal">=</string>
+
+
+    <string name="disp">Disp</string>
+    <string name="dispHint">H</string>
+    <string name="rotate_String">Rotate</string>
+    <string name="zoom_In_Out">Zoom in</string>
+    <string name="fade_String">Fade</string>
+    <string name="switch_theme">Switch theme</string>
+    <string name="random_color">random color</string>
+
+    <!--Settings: Deactivation options-->
+    <string name="option_5" translatable="false">Attempts: 5 </string>
+    <string name="option_7" translatable="false">Attempts: 7</string>
+    <string name="option_9" translatable="false">Attempts: 9</string>
+    <string name="option_12" translatable="false">Attempts: 12</string>
+    <string name="pref_value_key" translatable="false">Options</string>
+    <string name="pref_deactivate_attempts">Deactivate attempts</string>
+    <string name="pref_val_5" translatable="false">5</string>
+    <string name="pref_val_7" translatable="false">7</string>
+    <string name="pref_val_9" translatable="false">9</string>
+    <string name="pref_val_12" translatable="false">12</string>
+
+
+    <string name="action_location_found" translatable="false">Location</string>
+    <string name="action_search" translatable="false">Search</string>
+    <string name="action_help" translatable="false">Help</string>
+    <string name="action_check_updates" translatable="false">Update</string>
+    <string name="action_refresh" translatable="false">Refresh</string>
+    <string name="action_share" translatable="false">Share</string>
+
+
+</resources>

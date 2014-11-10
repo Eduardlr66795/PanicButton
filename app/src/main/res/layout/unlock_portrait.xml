@@ -1,0 +1,326 @@
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:stretchColumns="*"
+    tools:context=".Home"
+    android:background="#ffffff">
+    <!-- Row 1 with single column -->
+    <TableRow
+        android:layout_height="fill_parent"
+        android:layout_width="fill_parent"
+        android:gravity="center_horizontal"
+        android:background="#b0b0b0">
+        <TextView
+            android:id="@+id/timer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="100dp"
+            android:text="00:10"
+            android:textColor="#323232"
+            android:layout_span="4"
+            android:gravity="center"
+            android:padding="18dip"
+            android:background="#b0b0b0"
+            />
+
+    </TableRow>
+
+
+
+
+
+    <TableRow
+        android:id="@+id/row045"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:gravity="center_horizontal"
+        android:layout_span="4"
+        android:background="#FFFFFF">
+
+            <TextView
+                android:id="@+id/text_password_1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_span="1"
+                android:background = "@drawable/roundedbutton_space"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:paddingRight="5dp"
+                android:paddingLeft="10dp"
+                android:gravity="center"
+
+                />
+
+            <TextView
+                android:id="@+id/text_password_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_span="1"
+                android:gravity="center"
+                android:background = "@drawable/roundedbutton_space"
+                android:padding="20dp"
+
+
+                />
+
+
+            <TextView
+                android:id="@+id/text_password_3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background = "@drawable/roundedbutton_space"
+                android:layout_weight="1"
+                android:padding="20dp"
+                android:gravity="center"
+
+
+                />
+
+            <TextView
+                android:id="@+id/text_password_4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background = "@drawable/roundedbutton_space"
+                android:layout_weight="1"
+                android:padding="20dp"
+                android:gravity="center"
+
+                />
+
+
+
+
+
+
+        <!--
+        <TextView
+            android:id="@+id/display1"
+            android:layout_weight="1"
+            android:background="#000000"
+            android:textColor="#000000"
+
+
+
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+
+            android:gravity="center"/>
+
+
+-->
+
+
+
+    </TableRow>
+
+
+
+    <!--
+        <TableRow
+            android:id="@+id/row0451"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:gravity="center_horizontal"
+
+            android:background="#b0b0b0"
+
+            >
+
+               <TextView
+                   android:id="@+id/display11"
+                   android:layout_weight="1"
+                   android:background="#b0b0b0"
+                   android:textColor="#000000"
+
+                   android:padding="5dp"
+                   android:gravity="center"/>
+
+        </TableRow>
+
+
+           <Button
+               android:id="@+id/button_walkSafe"
+               android:text="WalkSafe"
+               android:layout_width="@dimen/dimen_button_w"
+               android:layout_height="@dimen/dimen_button_h"
+               android:textColor="#ffffff"
+               android:layout_weight="1"
+               android:drawableLeft="@drawable/walk"
+               android:background = "@drawable/roundedbutton"
+               android:layout_marginTop="30dp"
+               android:layout_centerHorizontal="true"
+               android:layout_alignParentTop="true"
+               android:layout_alignRight="@+id/button_emergency"
+               android:layout_alignEnd="@+id/button_emergency"
+
+               />
+
+
+
+           Row 2 with 3 columns
+                       android:inputType="textPassword|number"
+                   android:password="true"
+           -->
+    <TableRow
+        android:id="@+id/row01"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+        <Button
+            android:id="@+id/one"
+            android:text="1"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background = "@drawable/roundedbutton"
+            android:textColor="#323232"
+            android:padding="20dip"
+            android:gravity="center"/>
+        <Button
+            android:id="@+id/two"
+            android:text="2"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background = "@drawable/roundedbutton"
+            android:textColor="#323232"
+            android:padding="20dip"
+            android:gravity="center"/>
+        <Button
+            android:id="@+id/three"
+            android:text="3"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background = "@drawable/roundedbutton"
+            android:textColor="#323232"
+            android:padding="20dip"
+            android:gravity="center"/>
+    </TableRow>
+
+
+    <TableRow
+        android:id="@+id/row02"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+        <Button
+            android:id="@+id/four"
+            android:text="4"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background = "@drawable/roundedbutton"
+            android:textColor="#323232"
+            android:padding="20dip"
+            android:gravity="center"/>
+        <Button
+            android:id="@+id/five"
+            android:text="5"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background = "@drawable/roundedbutton"
+            android:textColor="#323232"
+            android:padding="20dip"
+            android:gravity="center"/>
+        <Button
+            android:id="@+id/six"
+            android:text="6"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background = "@drawable/roundedbutton"
+            android:textColor="#323232"
+            android:padding="20dip"
+            android:gravity="center"/>
+    </TableRow>
+
+
+    <TableRow
+        android:id="@+id/row03"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+        <Button
+            android:id="@+id/seven"
+            android:text="7"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background = "@drawable/roundedbutton"
+            android:textColor="#323232"
+            android:padding="20dip"
+            android:gravity="center"/>
+        <Button
+            android:id="@+id/eight"
+            android:text="8"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background = "@drawable/roundedbutton"
+            android:textColor="#323232"
+            android:padding="20dip"
+            android:gravity="center"/>
+        <Button
+            android:id="@+id/nine"
+            android:text="9"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background = "@drawable/roundedbutton"
+            android:textColor="#323232"
+            android:padding="20dip"
+            android:gravity="center"/>
+    </TableRow>
+
+
+
+    <TableRow
+        android:id="@+id/row04"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+        <Button
+            android:id="@+id/back"
+            android:text="Back"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background = "@drawable/roundedbutton"
+            android:textColor="#323232"
+            android:padding="20dip"
+            android:gravity="center"/>
+        <Button
+            android:id="@+id/zero"
+            android:text="0"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background = "@drawable/roundedbutton"
+            android:textColor="#323232"
+            android:padding="20dip"
+            android:gravity="center"/>
+        <Button
+            android:id="@+id/clear"
+            android:text="Clear"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background = "@drawable/roundedbutton"
+            android:textColor="#323232"
+            android:padding="20dip"
+            android:gravity="center"/>
+    </TableRow>
+
+
+
+    <TableRow
+        android:layout_height="fill_parent"
+        android:layout_width="fill_parent"
+        android:gravity="center_horizontal"
+        android:background="#b0b0b0">
+        <Button
+            android:id="@+id/enter"
+            android:text="Enter"
+            android:layout_weight="1"
+            android:background = "@drawable/roundedbutton"
+            android:textColor="#323232"
+            android:padding="20dip"
+            android:gravity="center"/>
+    </TableRow>
+
+
+
+
+</TableLayout>

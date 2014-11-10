@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.eddie.panicbutton" >
+
+    <uses-sdk
+        android:minSdkVersion="17"
+        android:targetSdkVersion="18" />
+
+    <!-- Set permissions: Enable app to send messages -->
+    <uses-permission android:name="android.permission.SEND_SMS"></uses-permission>
+
+    <!-- Set permissions: Enable app to receive messages  -->
+    <uses-permission android:name="android.permission.RECEIVE_SMS"></uses-permission>
+
+    <!-- Set permissions: Accounts  -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+
+    <!-- Set permissions: GPS  -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- Set permissions: Read contacts  -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <intent-filter>
+
+        <action android:name="android.intent.action.MAIN" />
+
+        <category android:name="android.intent.category.LAUNCHER" />
+
+        <category android:name="android.intent.category.HOME" />
+
+        <category android:name="android.intent.category.DEFAULT" />
+
+    </intent-filter>
+
+
+    <action android:name="android.intent.action.MAIN" />
+    <category android:name="android.intent.category.HOME" />
+    <category android:name="android.intent.category.DEFAULT" />
+    <category android:name="android.intent.category.MONKEY"/>
+    <uses-library android:name="com.google.android.maps" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/r2"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+
+        <activity
+            android:name=".panic_activities.Activity_aMain"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--Launch the walk safe activity-->
+        <activity
+            android:label="@string/app_name"
+            android:id="@+id/activity_walksafe"
+            android:name=".panic_activities.Activity_walkSafe" >
+        </activity>
+
+        <!--Launch the walk safe activity-->
+        <activity
+            android:label="@string/app_name"
+            android:id="@+id/activity_walksafe_button"
+            android:name=".panic_activities.Activity_walkSafe_button"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <!--Launch the emergency activity-->
+        <activity
+            android:label="@string/app_name"
+            android:id="@+id/activity_emergency"
+            android:name=".panic_activities.Activity_emergency" >
+        </activity>
+
+        <!--Launch the location activity-->
+        <activity
+            android:label="@string/app_name"
+            android:id="@+id/activity_location"
+            android:name=".panic_activities.Activity_location" >
+        </activity>
+
+        <!--Launch the location activity-->
+        <activity
+            android:label="@string/app_name"
+            android:id="@+id/activity_settings"
+            android:name=".panic_activities.SettingsActivity" >
+        </activity>
+
+        <activity
+            android:label="@string/app_name"
+            android:id="@+id/activity_unlock"
+            android:name=".panic_activities.Calc" >
+        </activity>
+
+
+        <activity android:name=".panic_activities.NotificationView"
+            android:label="Details of notification"
+            android:parentActivityName=".panic_activities.Activity_aMain">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity"/>
+        </activity>
+        <service android:name=".panic_activities.BroadcastService" />
+
+        <!-- Broadcast receiver: Intercept messages -->
+        <receiver android:name=".SmsReceiver"
+            android:exported="true" >
+            <intent-filter android:priority="2147483647">
+                <action android:name=
+                    "android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

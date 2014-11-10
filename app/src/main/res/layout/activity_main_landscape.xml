@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal"
+    android:padding="10dip">
+    <LinearLayout android:layout_height="wrap_content"
+        android:id="@+id/linearLayout1"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_gravity="center_vertical">
+
+        <TableLayout android:id="@+id/tableLayout1"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:stretchColumns="*"
+            android:gravity="center">
+            <TableRow android:id="@+id/tableRow1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <Button
+
+                    android:id="@+id/button_walkSafe"
+                    android:text="WalkSafe"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor ="#303030"
+                    android:drawableLeft="@drawable/phone"
+
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+
+                    >
+
+
+
+                </Button>
+                <Button
+                    android:id="@+id/button_locate"
+                    android:text="Location"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor ="#303030"
+                    android:drawableLeft="@drawable/fbmessenger"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    >
+                </Button>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tableRow2">
+                <Button
+                    android:id="@+id/button_emergency"
+                    android:text="Emergency"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor ="#303030"
+                    android:drawableLeft="@drawable/any"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    >
+
+                    </Button>
+                <Button
+                    android:id="@+id/button_quit"
+                    android:text="Quit"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor ="#303030"
+                    android:drawableLeft="@drawable/drawer"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    >
+                    </Button>
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+</LinearLayout>
+<!--<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal">
+
+
+
+    <Button
+        android:id="@+id/button_walkSafe"
+        android:text="WalkSafe"
+        android:layout_width="@dimen/dimen_button_w"
+        android:layout_height="@dimen/dimen_button_h"
+        android:textColor ="#303030"
+        android:drawableLeft="@drawable/phone"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        />
+
+
+
+    <Button
+        android:id="@+id/button_emergency"
+        android:text="Emergency"
+        android:layout_width="@dimen/dimen_button_w"
+        android:layout_height="@dimen/dimen_button_h"
+        android:textColor="#303030"
+        android:layout_weight="1"
+        android:drawableLeft="@drawable/any"
+
+
+        android:layout_marginTop="130dp"
+        android:layout_marginLeft="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_below="@+id/button_walkSafe"
+        />
+
+
+        <Button
+            android:id="@+id/button_locate"
+            android:text="Location"
+            android:layout_width="@dimen/dimen_button_w"
+            android:layout_height="@dimen/dimen_button_h"
+            android:textColor="#303030"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/fbmessenger"
+
+            android:layout_marginTop="270dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignLeft="@+id/button_emergency"
+            android:layout_alignStart="@+id/button_emergency"
+            />
+
+
+
+
+        <Button
+            android:id="@+id/button_quit"
+            android:text="Quit"
+            android:layout_width="@dimen/dimen_button_w"
+            android:layout_height="@dimen/dimen_button_h"
+            android:textColor="#303030"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/drawer"
+
+            android:layout_marginTop="400dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignLeft="@+id/button_emergency"
+            android:layout_alignStart="@+id/button_emergency"
+            />
+
+
+
+</RelativeLayout>
+-->
+
