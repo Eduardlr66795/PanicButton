@@ -20,17 +20,12 @@ public class BroadcastService extends Service {
     @Override
     public void onCreate() {
         super.onCreate();
-
-        Log.i(TAG, "Starting timer...");
-
         cdt = new CountDownTimer(11000, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {
                 bi.putExtra("countdown", millisUntilFinished);
-//                Toast.makeText(getApplicationContext(), (millisUntilFinished / 1000) + "", Toast.LENGTH_SHORT).show();
                 sendBroadcast(bi);
             }
-
             @Override
             public void onFinish() {
                 bi.putExtra("countdown", 0);

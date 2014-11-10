@@ -138,6 +138,9 @@ public class Activity_aMain extends Activity {
                 button_location();
             } else if(voice_text.startsWith("q")) {
                 button_quit();
+            } else if(voice_text.startsWith("b")) {
+                Intent intent = new Intent(Activity_aMain.this, Activity_location.class);
+                startActivity(intent);
             }
         }
     }
@@ -173,6 +176,7 @@ public class Activity_aMain extends Activity {
                     switch (view.getId()) {
                         case R.id.button_emergency: // Id of the button
                             button_emergency();
+                            Toast.makeText(context, "Feature disabled...", Toast.LENGTH_SHORT).show();
                             break;
                         default:
                             break;
@@ -244,12 +248,10 @@ public class Activity_aMain extends Activity {
         if (gps.canGetLocation()) {
             double latitude = gps.getLatitude();
             double longitude = gps.getLongitude();
-
             String uri = String.format(Locale.ENGLISH, "http://maps.google.com/maps?saddr=%f,%f(%s)&daddr=%f,%f (%s)", latitude, longitude, "146.232.212 (Home)", -33.9301592, 18.8628034, "Stellenbosch");
             Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(uri));
             intent.setClassName("com.google.android.apps.maps", "com.google.android.maps.MapsActivity");
             startActivity(intent);
-
             try {
                 startActivity(intent);
             } catch(ActivityNotFoundException ex) {

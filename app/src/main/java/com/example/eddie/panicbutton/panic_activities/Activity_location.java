@@ -4,6 +4,9 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
 
 import com.example.eddie.panicbutton.R;
 
@@ -18,7 +21,15 @@ public class Activity_location extends Activity  {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_animation);
+//        MediaPlayer mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.);
+//        mediaPlayer.start(); // no need to call prepare(); create() does that for you
 
+
+//            case R.id.rotate360:
+                ImageView image1 = (ImageView)findViewById(R.id.imageView1);
+                Animation animation1 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fade_2);
+                image1.startAnimation(animation1);
+//                return true;
 
 
 

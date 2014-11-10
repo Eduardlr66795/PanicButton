@@ -81,14 +81,6 @@ public class ItemListBaseAdapter extends BaseAdapter {
 
     public void onItemClick(AdapterView<?> adapter, View view, int position, long arg) {
 //        Toast.makeText(Activity_walkSafe.this, "Activity", Toast.LENGTH_SHORT).show();
-
-
         Log.d(TAG, "THIS IS THE POSITION=" + position);
     }
-
-
-
-
-
-
 }

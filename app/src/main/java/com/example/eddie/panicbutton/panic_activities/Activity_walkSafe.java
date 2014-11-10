@@ -73,7 +73,6 @@ public class Activity_walkSafe extends Activity {
 
                 CheckBox cb = (CheckBox)v.findViewById(R.id.item_checkbox);
                 cb.setChecked(true);
-//                Toast.makeText(Activity_walkSafe.this, "Click item", Toast.LENGTH_SHORT).show();
                 item_adapter.notifyDataSetChanged();
             }
         });

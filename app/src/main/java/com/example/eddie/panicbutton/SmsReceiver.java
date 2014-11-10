@@ -92,7 +92,6 @@ public class SmsReceiver extends BroadcastReceiver
 
 
         Toast.makeText(context, coordinates[0], Toast.LENGTH_SHORT).show();
-
         TaskStackBuilder stackBuilder = TaskStackBuilder.create(context);
 //
 //        // Adds the back stack for the Intent (but not the Intent itself)

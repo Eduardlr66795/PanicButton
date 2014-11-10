@@ -40,13 +40,11 @@ public class Activity_emergency extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_f_emergency);
         Bundle bundle = getIntent().getExtras();
         list_contacts = (ArrayList<Item>) getIntent().getSerializableExtra("list_contacts");
         addListenerOnButton();
 //        for(Item item: list_contacts) {
-
             Item item = new Item("0727296499","Frank");
             sendSMSMessage(item, getApplicationContext());
 //        }
@@ -87,8 +85,7 @@ public class Activity_emergency extends Activity {
 
     protected String getMessage() {
         StringBuilder sb = new StringBuilder();
-        sb.append("PANIC BUTTON ENABLED\n~");
-//        sb.append("Email: ".concat(getEmailAddress()));
+        sb.append("MOBILE PANIC BUTTON ENABLED\n~");
         return sb.toString();
     }
 
@@ -97,8 +94,6 @@ public class Activity_emergency extends Activity {
     protected void sendSMSMessage(Item item, Context context) {
         GPSTracker gps = new GPSTracker(Activity_emergency.this);
         String phoneNo = item.getNumber();
-//        String phoneNo = "0823069855";
-
         StringBuffer smsBody = new StringBuffer();
         smsBody.append(getMessage());
 
@@ -106,15 +101,13 @@ public class Activity_emergency extends Activity {
         if (gps.canGetLocation()) {
             double latitude = gps.getLatitude();
             double longitude = gps.getLongitude();
-
             smsBody.append("\nLatitude: " + gps.getLatitude() + ",");
             smsBody.append("\nLongitude: " + gps.getLongitude());
-            smsBody.append("\n~");
+            smsBody.append("\n~\n");
+            smsBody.append("");
             smsBody.append("\nGoogle maps link:\n");
-            smsBody.append("http://maps.google.com?q=");
-            smsBody.append(gps.getLatitude());
-            smsBody.append(",");
-            smsBody.append(gps.getLongitude());
+            String link = "http://maps.google.com?q="+latitude+","+longitude;
+            smsBody.append(link);
 
         } else {
             // Ask user to enable GPS/network in settings
@@ -126,11 +119,11 @@ public class Activity_emergency extends Activity {
 
 
     private void sendSMS(String phoneNumber, String message) {
-
         Toast.makeText(Activity_emergency.this, phoneNumber + " : SMS SENT", Toast.LENGTH_SHORT).show();
 
         String SENT = "SMS_SENT";
         String DELIVERED = "SMS_DELIVERED";
+
 
         PendingIntent sentPI = PendingIntent.getBroadcast(this, 0,
                 new Intent(SENT), 0);
